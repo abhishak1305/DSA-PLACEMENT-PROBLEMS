@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🚀 DSA Placement Tracker</title>
+    <meta name="description"
+        content="Structured topic-wise DSA placement preparation tracker with 100+ problems. Track your progress through Arrays, Trees, Graphs, DP and more.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: #0f172a;
+            min-height: 100vh;
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #1e293b;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #475569;
+            border-radius: 3px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #64748b;
+        }
+
+        /* Smooth section transitions */
+        [id^="section-"] {
+            transition: max-height 0.3s ease-in-out;
+            overflow: hidden;
+        }
+
+        /* Checkbox accent */
+        input[type="checkbox"] {
+            accent-color: #10b981;
+        }
+
+        /* Progress bar animation */
+        #progress-bar {
+            transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* Glow effect for header */
+        .header-glow {
+            background: radial-gradient(ellipse at 50% 0%, rgba(99, 102, 241, 0.15) 0%, transparent 60%);
+        }
+
+        /* Subtle floating animation */
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-6px);
+            }
+        }
+
+        .float-anim {
+            animation: float 3s ease-in-out infinite;
+        }
+    </style>
+</head>
+
+<body class="text-slate-100">
+
+    <!-- ===== TOP BANNER ===== -->
+    <div id="top-banner" class="sticky top-0 z-50 bg-indigo-600 w-full">
+        <div class="max-w-7xl mx-auto px-4 py-2.5 flex items-center justify-between gap-4">
+            <div class="flex items-center gap-3 min-w-0">
+                <svg class="w-5 h-5 text-white flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                        d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                </svg>
+                <span class="text-white text-sm font-medium truncate">Hi, I'm Abhishak Chaturvedi! Show your support by
+                    starring us on GitHub ⭐</span>
+            </div>
+            <div class="flex items-center gap-3 flex-shrink-0">
+                <a href="https://github.com/abhishak1305/DSA-PLACEMENT-PROBLEMS" target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex items-center gap-1.5 px-4 py-1.5 bg-white text-indigo-700 text-sm font-semibold rounded-md hover:bg-indigo-50 transition-colors duration-200">
+                    Click Here ⭐
+                </a>
+                <button onclick="document.getElementById('top-banner').style.display='none'"
+                    class="text-white/80 hover:text-white transition-colors p-1">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Background gradient overlay -->
+    <div class="fixed inset-0 header-glow pointer-events-none"></div>
+
+    <div class="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+
+        <!-- ===== HEADER ===== -->
+        <header class="text-center mb-10">
+            <div class="inline-block mb-4">
+                <span class="float-anim inline-block text-5xl sm:text-6xl">🚀</span>
+            </div>
+            <h1
+                class="text-3xl sm:text-4xl lg:text-5xl font-extrabold bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-3">
+                DSA Placement Tracker
+            </h1>
+            <p class="text-slate-400 text-base sm:text-lg font-medium tracking-wide">
+                Structured Topic-wise Preparation
+            </p>
+            <p class="text-slate-500 text-xs mt-2">
+                Data sourced from
+                <a href="https://github.com/abhishak1305/DSA-PLACEMENT-PROBLEMS" target="_blank"
+                    class="text-indigo-400 hover:text-indigo-300 underline underline-offset-2">abhishak1305/DSA-PLACEMENT-PROBLEMS</a>
+            </p>
+        </header>
+
+        <!-- ===== PROGRESS SECTION ===== -->
+        <div class="mb-10 bg-slate-800/60 backdrop-blur rounded-xl p-5 border border-slate-700/50 shadow-lg">
+            <div class="flex items-center justify-between mb-3">
+                <span id="progress-text" class="text-sm font-medium text-slate-300">Completed 0 out of 0 Problems</span>
+                <span id="progress-percent" class="text-sm font-bold text-indigo-400">0%</span>
+            </div>
+            <div class="w-full h-3 bg-slate-700 rounded-full overflow-hidden">
+                <div id="progress-bar"
+                    class="h-full rounded-full bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 shadow-lg shadow-indigo-500/25"
+                    style="width: 0%;"></div>
+            </div>
+        </div>
+
+        <!-- ===== TOPICS CONTAINER ===== -->
+        <main id="topics-container">
+            <!-- Rendered by script.js -->
+        </main>
+
+        <!-- ===== CONTACT US ===== -->
+        <div class="mt-14 mb-6 bg-slate-800/60 backdrop-blur rounded-xl p-6 border border-slate-700/50 text-center">
+            <h2 class="text-xl font-bold text-slate-100 mb-2">📬 Contact Us</h2>
+            <p class="text-slate-400 text-sm mb-4">
+                If you find any errors or issues, please let us know. Let's improve it together and grow as a team 💪
+            </p>
+            <a href="mailto:abhishak1305@gmail.com"
+                class="inline-flex items-center gap-2 px-5 py-2.5 bg-indigo-500/20 hover:bg-indigo-500/30 text-indigo-400 hover:text-indigo-300 rounded-lg border border-indigo-500/30 hover:border-indigo-400/50 transition-all duration-200 text-sm font-medium">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+                abhishak1305@gmail.com
+            </a>
+        </div>
+
+        <!-- ===== FOOTER ===== -->
+        <footer class="text-center mb-6">
+            <p class="text-slate-500 text-xs">
+                Built with ❤️ for placement preparation &nbsp;•&nbsp; Keep grinding! 💪
+            </p>
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
